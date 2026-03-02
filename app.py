@@ -31,7 +31,7 @@ drawing_tasks = ["Draw a straight horizontal line", "Draw a circle", "Sign your 
 # --- Step 1: Participant Info ---
 if st.session_state.step == "info":
     st.header("Step 1: Participant Information")
-    p_id = st.text_input("Participant ID", key="p_id_input")
+    p_id = st.text_input("Participant ID (please enter your name)", key="p_id_input")
     a_grp = st.selectbox("Age Group", [str(i) for i in range(1, 101)], index=25)
     
     if st.button("Start Study"):
