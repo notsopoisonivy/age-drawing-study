@@ -1,7 +1,5 @@
-streamlit==1.30.0
+streamlit
 streamlit-drawable-canvas
+streamlit-gsheets
 pandas
 numpy
-altair==4.2.2
-streamlit-drawable-canvas
-st-gsheets-connection
