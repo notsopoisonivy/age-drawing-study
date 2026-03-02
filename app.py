@@ -93,8 +93,8 @@ if participant_id and age_group:
     # -------------------
 # Save CSV / Download
 # -------------------
-if all_drawing_data or all_typing_data:
-    st.subheader("Submit Your Data")
+save_button = st.button("Save Data to CSV")
+if save_button:
     
     st.write("Once you finish all tasks, click the button below to download your data.")
     st.write("The file will include your participant ID and age group in the filename.")
