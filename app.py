@@ -9,7 +9,7 @@ st.title("Age vs Motor Control Study")
 
 # Participant info
 participant_id = st.text_input("Participant ID")
-age_group = st.selectbox("Age Group", ["Under30", "Over50"])
+age_group = st.selectbox("Age Group", ["Enter your age"])
 
 if participant_id and age_group:
     st.write("Instructions:")
@@ -76,16 +76,54 @@ if participant_id and age_group:
             all_typing_data.append([participant_id, age_group, "Typing", "key_press", char, timestamp])
         st.success("Typing task submitted!")
     
-    # -------------------
-    # Save CSV
-    # -------------------
-    save_button = st.button("Save Data to CSV")
-    if save_button:
-        drawing_df = pd.DataFrame(all_drawing_data, columns=["participant_id", "age_group", "task", "event_type", "x", "y", "timestamp"])
-        typing_df = pd.DataFrame(all_typing_data, columns=["participant_id", "age_group", "task", "event_type", "key", "timestamp"])
+    # # -------------------
+    # # Save CSV
+    # # -------------------
+    # save_button = st.button("Save Data to CSV")
+    # if save_button:
+    #     drawing_df = pd.DataFrame(all_drawing_data, columns=["participant_id", "age_group", "task", "event_type", "x", "y", "timestamp"])
+    #     typing_df = pd.DataFrame(all_typing_data, columns=["participant_id", "age_group", "task", "event_type", "key", "timestamp"])
         
-        drawing_df.to_csv(f"{participant_id}_drawing.csv", index=False)
-        typing_df.to_csv(f"{participant_id}_typing.csv", index=False)
+    #     drawing_df.to_csv(f"{participant_id}_drawing.csv", index=False)
+    #     typing_df.to_csv(f"{participant_id}_typing.csv", index=False)
         
-        st.success("Data saved locally as CSV!")
-        st.write("You can now use these CSVs for feature extraction.")
+    #     st.success("Data saved locally as CSV!")
+    #     st.write("You can now use these CSVs for feature extraction.")
+
+    # -------------------
+# Save CSV / Download
+# -------------------
+if all_drawing_data or all_typing_data:
+    st.subheader("Submit Your Data")
+    
+    st.write("Once you finish all tasks, click the button below to download your data.")
+    st.write("The file will include your participant ID and age group in the filename.")
+    
+    # Create DataFrames
+    drawing_df = pd.DataFrame(all_drawing_data, columns=["participant_id", "age_group", "task", "event_type", "x", "y", "timestamp"])
+    typing_df = pd.DataFrame(all_typing_data, columns=["participant_id", "age_group", "task", "event_type", "key", "timestamp"])
+    
+    # Combine drawing + typing into one CSV
+    # Fill missing columns with NaN
+    drawing_df_typing_compatible = drawing_df.copy()
+    drawing_df_typing_compatible["key"] = np.nan  # typing column placeholder
+
+    typing_df_drawing_compatible = typing_df.copy()
+    typing_df_drawing_compatible["x"] = np.nan
+    typing_df_drawing_compatible["y"] = np.nan
+
+    combined_df = pd.concat([drawing_df_typing_compatible, typing_df_drawing_compatible], ignore_index=True)
+    
+    # Generate dynamic filename
+    file_name = f"participant_{participant_id}_{age_group}.csv"
+    
+    # Streamlit download button
+    st.download_button(
+        label="Submit / Download Your Data",
+        data=combined_df.to_csv(index=False),
+        file_name=file_name,
+        mime="text/csv"
+    )
+    
+    st.success(f"Data ready! CSV will be downloaded as: {file_name}")
+    st.write("Please submit this file to the shared folder or via email as instructed by your study administrator.")
