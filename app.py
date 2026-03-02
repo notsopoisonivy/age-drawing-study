@@ -1,129 +1,151 @@
-# save this as app.py
 import streamlit as st
+from streamlit_drawable_canvas import st_canvas
+from streamlit_gsheets import GSheetsConnection
 import pandas as pd
 import numpy as np
 import time
-import json
 
+# --- Page Config ---
+st.set_page_config(page_title="Motor Control Study", layout="centered")
 st.title("Age vs Motor Control Study")
 
-# Participant info
-participant_id = st.text_input("Participant ID")
-age_group = st.selectbox("Age Group", ["1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100"])
+# --- Connect to Google Sheets ---
+# This looks for [connections.gsheets] in your .streamlit/secrets.toml
+try:
+    conn = st.connection("gsheets", type=GSheetsConnection)
+    sheet_available = True
+except Exception as e:
+    sheet_available = False
+    st.sidebar.error("Google Sheets not connected. Download button will be your backup.")
 
-if participant_id and age_group:
-    st.write("Instructions:")
-    st.write("- Use your trackpad only")
-    st.write("- Complete each drawing and typing task in order")
-    
-    # -------------------
-    # Drawing Section
-    # -------------------
-    st.subheader("Drawing Tasks")
-    
-    drawing_tasks = ["Draw a straight horizontal line", 
-                     "Draw a circle", 
-                     "Sign your name naturally"]
-    
-    all_drawing_data = []
-    
-    for task in drawing_tasks:
-        st.write(task)
-        canvas_data = st.empty()
-        
-        # Use Streamlit's built-in drawing tool
-        from streamlit_drawable_canvas import st_canvas
-        
-        canvas_result = st_canvas(
-            fill_color="rgba(0, 0, 0, 0)", 
-            stroke_width=2,
-            stroke_color="black",
-            background_color="white",
-            height=400,
-            width=700,
-            drawing_mode="freedraw",
-            key=task
-        )
-        
-        if canvas_result.json_data is not None:
-            # json_data contains all points
-            drawing_points = json.loads(canvas_result.json_data)
-            # add participant info + task
-            for obj in drawing_points.get("objects", []):
-                if obj["type"] == "path":
-                    for point in obj["path"]:
-                        x, y = point[1], point[2]
-                        timestamp = time.time()
-                        all_drawing_data.append([participant_id, age_group, task, "draw_point", x, y, timestamp])
-    
-    st.success("Drawing tasks complete!")
+# --- Initialize Session State ---
+if "step" not in st.session_state:
+    st.session_state.step = "info"
+if "task_index" not in st.session_state:
+    st.session_state.task_index = 0
+if "all_data" not in st.session_state:
+    st.session_state.all_data = []
 
-    # -------------------
-    # Typing Section
-    # -------------------
-    st.subheader("Typing Task")
-    typing_text = st.text_input("Type this sentence:", value="The quick brown fox jumps over the lazy dog")
-    st.write("You typed:", typing_text)
-    
-    all_typing_data = []
-    
-    # Record timing on key press is tricky in Streamlit.
-    # Workaround: record submission timestamp
-    submit_button = st.button("Submit Typing Task")
-    if submit_button:
-        timestamp = time.time()
-        for i, char in enumerate(typing_text):
-            all_typing_data.append([participant_id, age_group, "Typing", "key_press", char, timestamp])
-        st.success("Typing task submitted!")
-    
-    # # -------------------
-    # # Save CSV
-    # # -------------------
-    # save_button = st.button("Save Data to CSV")
-    # if save_button:
-    #     drawing_df = pd.DataFrame(all_drawing_data, columns=["participant_id", "age_group", "task", "event_type", "x", "y", "timestamp"])
-    #     typing_df = pd.DataFrame(all_typing_data, columns=["participant_id", "age_group", "task", "event_type", "key", "timestamp"])
-        
-    #     drawing_df.to_csv(f"{participant_id}_drawing.csv", index=False)
-    #     typing_df.to_csv(f"{participant_id}_typing.csv", index=False)
-        
-    #     st.success("Data saved locally as CSV!")
-    #     st.write("You can now use these CSVs for feature extraction.")
+drawing_tasks = ["Draw a straight horizontal line", "Draw a circle", "Sign your name naturally"]
 
-    # -------------------
-# Save CSV / Download
-# -------------------
-save_button = st.button("Save Data to CSV")
-if save_button:
+# --- Step 1: Participant Info ---
+if st.session_state.step == "info":
+    st.header("Step 1: Participant Information")
+    p_id = st.text_input("Participant ID", key="p_id_input")
+    a_grp = st.selectbox("Age Group", [str(i) for i in range(1, 101)], index=25)
     
-    st.write("Once you finish all tasks, click the button below to download your data.")
-    st.write("The file will include your participant ID and age group in the filename.")
-    
-    # Create DataFrames
-    drawing_df = pd.DataFrame(all_drawing_data, columns=["participant_id", "age_group", "task", "event_type", "x", "y", "timestamp"])
-    typing_df = pd.DataFrame(all_typing_data, columns=["participant_id", "age_group", "task", "event_type", "key", "timestamp"])
-    
-    # Combine drawing + typing into one CSV
-    # Fill missing columns with NaN
-    drawing_df_typing_compatible = drawing_df.copy()
-    drawing_df_typing_compatible["key"] = np.nan  # typing column placeholder
+    if st.button("Start Study"):
+        if p_id:
+            st.session_state.participant_id = p_id
+            st.session_state.age_group = a_grp
+            st.session_state.step = "drawing"
+            st.rerun()
+        else:
+            st.error("Please enter a Participant ID")
 
-    typing_df_drawing_compatible = typing_df.copy()
-    typing_df_drawing_compatible["x"] = np.nan
-    typing_df_drawing_compatible["y"] = np.nan
+# --- Step 2: Drawing Tasks (Timing + Sync) ---
+elif st.session_state.step == "drawing":
+    idx = st.session_state.task_index
+    current_task = drawing_tasks[idx]
+    
+    st.header(f"Drawing Task {idx + 1} of {len(drawing_tasks)}")
+    st.info(f"**Instructions:** {current_task}")
 
-    combined_df = pd.concat([drawing_df_typing_compatible, typing_df_drawing_compatible], ignore_index=True)
-    
-    # Generate dynamic filename
-    file_name = f"participant_{participant_id}_{age_group}.csv"
-    
-    # Streamlit download button
-    st.download_button(
-        label="Submit / Download Your Data",
-        data=combined_df.to_csv(index=False),
-        file_name=file_name,
-        mime="text/csv"
+    canvas_result = st_canvas(
+        fill_color="rgba(0, 0, 0, 0)",
+        stroke_width=2,
+        stroke_color="black",
+        background_color="white",
+        height=400,
+        width=700,
+        drawing_mode="freedraw",
+        key=f"canvas_{idx}" 
     )
+
+    # Capture the "First Touch" for accurate duration
+    if canvas_result.json_data and canvas_result.json_data.get("objects"):
+        if f"first_touch_{idx}" not in st.session_state:
+            st.session_state[f"first_touch_{idx}"] = time.time()
+
+    if st.button("Submit & Next"):
+        if canvas_result.json_data and canvas_result.json_data.get("objects"):
+            actual_start = st.session_state.get(f"first_touch_{idx}", time.time())
+            actual_end = time.time()
+            total_duration = actual_end - actual_start
+            
+            objects = canvas_result.json_data.get("objects", [])
+            all_points = [p for obj in objects for p in obj.get("path", []) if len(p) >= 3]
+            num_points = len(all_points)
+            
+            if num_points > 0:
+                new_rows = []
+                for i, p in enumerate(all_points):
+                    point_ts = actual_start + (i / num_points) * total_duration
+                    row = {
+                        "participant_id": st.session_state.participant_id,
+                        "age_group": st.session_state.age_group,
+                        "task": current_task,
+                        "x": p[1],
+                        "y": p[2],
+                        "timestamp": point_ts,
+                        "point_index": i,
+                        "total_task_duration": total_duration
+                    }
+                    st.session_state.all_data.append(row)
+                    new_rows.append(row)
+                
+                # --- GOOGLE SHEETS SYNC ---
+                if sheet_available:
+                    with st.spinner("Syncing to Google Sheets..."):
+                        try:
+                            # Try to append to existing data
+                            existing_df = conn.read(worksheet="MotorStudy")
+                            updated_df = pd.concat([existing_df, pd.DataFrame(new_rows)], ignore_index=True)
+                            conn.update(worksheet="MotorStudy", data=updated_df)
+                        except Exception:
+                            # If sheet is empty/new, just upload the new rows
+                            conn.update(worksheet="MotorStudy", data=pd.DataFrame(new_rows))
+
+                # Advance Task
+                if idx + 1 < len(drawing_tasks):
+                    st.session_state.task_index += 1
+                else:
+                    st.session_state.step = "typing"
+                st.rerun()
+        else:
+            st.warning("Please draw the task first.")
+
+# --- Step 3: Typing Task ---
+elif st.session_state.step == "typing":
+    st.header("Step 3: Typing Task")
+    sentence = "The quick brown fox jumps over the lazy dog"
+    st.code(sentence)
     
-    st.success(f"Data ready! CSV will be downloaded as: {file_name}")
-    st.write("Please submit this file to the shared folder or via email as instructed by your study administrator.")
+    with st.form("typing_form"):
+        typed_text = st.text_input("Type here:")
+        submit_typing = st.form_submit_button("Finish Study")
+        
+        if submit_typing:
+            if typed_text:
+                st.session_state.all_data.append({
+                    "participant_id": st.session_state.participant_id,
+                    "age_group": st.session_state.age_group,
+                    "task": "Typing",
+                    "timestamp": time.time(),
+                    "content": typed_text
+                })
+                st.session_state.step = "download"
+                st.rerun()
+
+# --- Step 4: Download ---
+elif st.session_state.step == "download":
+    st.header("Study Complete!")
+    st.balloons()
+    
+    df = pd.DataFrame(st.session_state.all_data)
+    csv = df.to_csv(index=False).encode('utf-8')
+    st.download_button(label="📥 Download Results CSV", data=csv, file_name="study_results.csv")
+    
+    if st.button("Start New Session"):
+        st.session_state.clear()
+        st.rerun()
