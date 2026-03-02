@@ -1,0 +1,304 @@
+participant_id,age_group,task,event_type,x_or_key,y,timestamp
+1,1,Draw a straight horizontal line (left to right).,draw_start,220,128,1772424271.673756
+1,1,Draw a straight horizontal line (left to right).,draw_move,223,128,1772424271.8563688
+1,1,Draw a straight horizontal line (left to right).,draw_move,232,129,1772424271.877444
+1,1,Draw a straight horizontal line (left to right).,draw_move,243,130,1772424271.88785
+1,1,Draw a straight horizontal line (left to right).,draw_move,258,132,1772424271.906256
+1,1,Draw a straight horizontal line (left to right).,draw_move,274,133,1772424271.92163
+1,1,Draw a straight horizontal line (left to right).,draw_move,290,133,1772424271.9385889
+1,1,Draw a straight horizontal line (left to right).,draw_move,307,134,1772424271.9551628
+1,1,Draw a straight horizontal line (left to right).,draw_move,321,134,1772424271.971946
+1,1,Draw a straight horizontal line (left to right).,draw_move,334,136,1772424271.98909
+1,1,Draw a straight horizontal line (left to right).,draw_move,347,137,1772424272.005495
+1,1,Draw a straight horizontal line (left to right).,draw_move,359,138,1772424272.0220978
+1,1,Draw a straight horizontal line (left to right).,draw_move,373,139,1772424272.038656
+1,1,Draw a straight horizontal line (left to right).,draw_move,385,140,1772424272.055298
+1,1,Draw a straight horizontal line (left to right).,draw_move,398,140,1772424272.0723689
+1,1,Draw a straight horizontal line (left to right).,draw_move,411,141,1772424272.088922
+1,1,Draw a straight horizontal line (left to right).,draw_move,424,142,1772424272.105302
+1,1,Draw a straight horizontal line (left to right).,draw_move,435,142,1772424272.1218162
+1,1,Draw a straight horizontal line (left to right).,draw_move,445,143,1772424272.138541
+1,1,Draw a straight horizontal line (left to right).,draw_move,453,144,1772424272.155232
+1,1,Draw a straight horizontal line (left to right).,draw_move,459,144,1772424272.171707
+1,1,Draw a straight horizontal line (left to right).,draw_move,465,144,1772424272.1888058
+1,1,Draw a straight horizontal line (left to right).,draw_move,469,144,1772424272.205303
+1,1,Draw a straight horizontal line (left to right).,draw_move,472,144,1772424272.222262
+1,1,Draw a straight horizontal line (left to right).,draw_end,472,144,1772424272.422993
+1,1,Draw a circle.,draw_start,378,180,1772424277.056611
+1,1,Draw a circle.,draw_move,376,180,1772424277.2388952
+1,1,Draw a circle.,draw_move,372,180,1772424277.268683
+1,1,Draw a circle.,draw_move,358,184,1772424277.295851
+1,1,Draw a circle.,draw_move,339,191,1772424277.3059158
+1,1,Draw a circle.,draw_move,324,199,1772424277.321855
+1,1,Draw a circle.,draw_move,309,207,1772424277.338527
+1,1,Draw a circle.,draw_move,297,215,1772424277.3551638
+1,1,Draw a circle.,draw_move,286,223,1772424277.3719501
+1,1,Draw a circle.,draw_move,278,231,1772424277.38866
+1,1,Draw a circle.,draw_move,272,239,1772424277.405463
+1,1,Draw a circle.,draw_move,268,248,1772424277.4221818
+1,1,Draw a circle.,draw_move,265,257,1772424277.438668
+1,1,Draw a circle.,draw_move,263,267,1772424277.455742
+1,1,Draw a circle.,draw_move,262,277,1772424277.4721012
+1,1,Draw a circle.,draw_move,261,285,1772424277.488766
+1,1,Draw a circle.,draw_move,261,293,1772424277.5050938
+1,1,Draw a circle.,draw_move,261,299,1772424277.5217679
+1,1,Draw a circle.,draw_move,261,304,1772424277.5384698
+1,1,Draw a circle.,draw_move,261,306,1772424277.555236
+1,1,Draw a circle.,draw_move,261,308,1772424277.57182
+1,1,Draw a circle.,draw_move,262,309,1772424277.588726
+1,1,Draw a circle.,draw_move,264,311,1772424277.6055
+1,1,Draw a circle.,draw_move,267,313,1772424277.622062
+1,1,Draw a circle.,draw_move,271,315,1772424277.638585
+1,1,Draw a circle.,draw_move,278,317,1772424277.655622
+1,1,Draw a circle.,draw_move,286,319,1772424277.671923
+1,1,Draw a circle.,draw_move,296,320,1772424277.688565
+1,1,Draw a circle.,draw_move,308,321,1772424277.70507
+1,1,Draw a circle.,draw_move,323,320,1772424277.721787
+1,1,Draw a circle.,draw_move,339,319,1772424277.738573
+1,1,Draw a circle.,draw_move,356,314,1772424277.755141
+1,1,Draw a circle.,draw_move,374,309,1772424277.7717981
+1,1,Draw a circle.,draw_move,392,304,1772424277.7885811
+1,1,Draw a circle.,draw_move,410,299,1772424277.805241
+1,1,Draw a circle.,draw_move,422,296,1772424277.821804
+1,1,Draw a circle.,draw_move,432,293,1772424277.838437
+1,1,Draw a circle.,draw_move,440,289,1772424277.855573
+1,1,Draw a circle.,draw_move,445,284,1772424277.872024
+1,1,Draw a circle.,draw_move,449,278,1772424277.888608
+1,1,Draw a circle.,draw_move,451,272,1772424277.905142
+1,1,Draw a circle.,draw_move,454,263,1772424277.921725
+1,1,Draw a circle.,draw_move,455,256,1772424277.9383838
+1,1,Draw a circle.,draw_move,456,249,1772424277.955277
+1,1,Draw a circle.,draw_move,456,242,1772424277.971858
+1,1,Draw a circle.,draw_move,456,237,1772424277.9885771
+1,1,Draw a circle.,draw_move,455,232,1772424278.0052202
+1,1,Draw a circle.,draw_move,452,227,1772424278.0219789
+1,1,Draw a circle.,draw_move,448,222,1772424278.038684
+1,1,Draw a circle.,draw_move,443,216,1772424278.055131
+1,1,Draw a circle.,draw_move,438,211,1772424278.071703
+1,1,Draw a circle.,draw_move,433,207,1772424278.0885088
+1,1,Draw a circle.,draw_move,428,203,1772424278.105103
+1,1,Draw a circle.,draw_move,425,200,1772424278.121717
+1,1,Draw a circle.,draw_move,422,197,1772424278.138436
+1,1,Draw a circle.,draw_move,419,196,1772424278.155335
+1,1,Draw a circle.,draw_move,416,194,1772424278.171979
+1,1,Draw a circle.,draw_move,412,192,1772424278.188628
+1,1,Draw a circle.,draw_move,408,190,1772424278.2052412
+1,1,Draw a circle.,draw_move,405,188,1772424278.221952
+1,1,Draw a circle.,draw_move,401,187,1772424278.2387772
+1,1,Draw a circle.,draw_move,398,185,1772424278.255338
+1,1,Draw a circle.,draw_move,395,184,1772424278.2720351
+1,1,Draw a circle.,draw_move,391,182,1772424278.2884061
+1,1,Draw a circle.,draw_move,388,181,1772424278.305205
+1,1,Draw a circle.,draw_move,384,180,1772424278.321728
+1,1,Draw a circle.,draw_move,381,179,1772424278.33843
+1,1,Draw a circle.,draw_move,379,178,1772424278.3552032
+1,1,Draw a circle.,draw_move,377,178,1772424278.371827
+1,1,Draw a circle.,draw_move,376,178,1772424278.3884952
+1,1,Draw a circle.,draw_move,375,178,1772424278.405209
+1,1,Draw a circle.,draw_move,375,177,1772424278.4221172
+1,1,Draw a circle.,draw_end,375,177,1772424278.4556239
+1,1,Sign your name naturally.,draw_start,168,203,1772424280.9401631
+1,1,Sign your name naturally.,draw_move,168,201,1772424281.089374
+1,1,Sign your name naturally.,draw_move,168,195,1772424281.111139
+1,1,Sign your name naturally.,draw_move,168,185,1772424281.130121
+1,1,Sign your name naturally.,draw_move,168,171,1772424281.138475
+1,1,Sign your name naturally.,draw_move,169,152,1772424281.164608
+1,1,Sign your name naturally.,draw_move,171,139,1772424281.17423
+1,1,Sign your name naturally.,draw_move,173,136,1772424281.187566
+1,1,Sign your name naturally.,draw_move,175,133,1772424281.205961
+1,1,Sign your name naturally.,draw_move,177,132,1772424281.222732
+1,1,Sign your name naturally.,draw_move,178,132,1772424281.2400901
+1,1,Sign your name naturally.,draw_move,179,134,1772424281.2574348
+1,1,Sign your name naturally.,draw_move,179,140,1772424281.2737331
+1,1,Sign your name naturally.,draw_move,177,150,1772424281.2901492
+1,1,Sign your name naturally.,draw_move,173,163,1772424281.306911
+1,1,Sign your name naturally.,draw_move,165,178,1772424281.323661
+1,1,Sign your name naturally.,draw_move,157,191,1772424281.3403149
+1,1,Sign your name naturally.,draw_move,151,201,1772424281.356962
+1,1,Sign your name naturally.,draw_move,148,207,1772424281.373434
+1,1,Sign your name naturally.,draw_move,146,211,1772424281.389859
+1,1,Sign your name naturally.,draw_move,144,213,1772424281.407138
+1,1,Sign your name naturally.,draw_move,144,211,1772424281.472214
+1,1,Sign your name naturally.,draw_move,148,206,1772424281.48864
+1,1,Sign your name naturally.,draw_move,155,199,1772424281.505441
+1,1,Sign your name naturally.,draw_move,162,192,1772424281.5219479
+1,1,Sign your name naturally.,draw_move,169,186,1772424281.538379
+1,1,Sign your name naturally.,draw_move,175,182,1772424281.554983
+1,1,Sign your name naturally.,draw_move,179,180,1772424281.5717912
+1,1,Sign your name naturally.,draw_move,181,179,1772424281.5883882
+1,1,Sign your name naturally.,draw_move,183,180,1772424281.60494
+1,1,Sign your name naturally.,draw_move,184,184,1772424281.621817
+1,1,Sign your name naturally.,draw_move,185,192,1772424281.6384158
+1,1,Sign your name naturally.,draw_move,185,199,1772424281.655114
+1,1,Sign your name naturally.,draw_move,185,204,1772424281.671817
+1,1,Sign your name naturally.,draw_move,186,207,1772424281.688951
+1,1,Sign your name naturally.,draw_move,187,208,1772424281.705452
+1,1,Sign your name naturally.,draw_move,191,206,1772424281.721644
+1,1,Sign your name naturally.,draw_move,196,203,1772424281.7385979
+1,1,Sign your name naturally.,draw_move,202,198,1772424281.7550468
+1,1,Sign your name naturally.,draw_move,207,195,1772424281.7716138
+1,1,Sign your name naturally.,draw_move,210,194,1772424281.7884228
+1,1,Sign your name naturally.,draw_move,211,194,1772424281.805245
+1,1,Sign your name naturally.,draw_move,212,196,1772424281.822052
+1,1,Sign your name naturally.,draw_move,212,200,1772424281.838633
+1,1,Sign your name naturally.,draw_move,213,204,1772424281.8553972
+1,1,Sign your name naturally.,draw_move,223,206,1772424281.906719
+1,1,Sign your name naturally.,draw_move,228,206,1772424281.9210901
+1,1,Sign your name naturally.,draw_move,231,206,1772424281.940007
+1,1,Sign your name naturally.,draw_move,232,207,1772424281.9543161
+1,1,Sign your name naturally.,draw_move,232,211,1772424281.971055
+1,1,Sign your name naturally.,draw_move,229,217,1772424281.988058
+1,1,Sign your name naturally.,draw_move,226,221,1772424282.005055
+1,1,Sign your name naturally.,draw_move,223,224,1772424282.021816
+1,1,Sign your name naturally.,draw_move,222,225,1772424282.038593
+1,1,Sign your name naturally.,draw_move,221,215,1772424282.055261
+1,1,Sign your name naturally.,draw_move,229,184,1772424282.072329
+1,1,Sign your name naturally.,draw_move,250,139,1772424282.089031
+1,1,Sign your name naturally.,draw_move,282,96,1772424282.104693
+1,1,Sign your name naturally.,draw_move,314,71,1772424282.121516
+1,1,Sign your name naturally.,draw_move,341,62,1772424282.139646
+1,1,Sign your name naturally.,draw_move,361,60,1772424282.1555462
+1,1,Sign your name naturally.,draw_move,370,63,1772424282.172024
+1,1,Sign your name naturally.,draw_end,370,63,1772424282.273097
+1,1,Sign your name naturally.,draw_start,369,185,1772424283.5066361
+1,1,Sign your name naturally.,draw_move,370,185,1772424283.838499
+1,1,Sign your name naturally.,draw_move,373,185,1772424283.866581
+1,1,Sign your name naturally.,draw_move,380,183,1772424283.8709881
+1,1,Sign your name naturally.,draw_move,390,179,1772424283.889577
+1,1,Sign your name naturally.,draw_move,402,175,1772424283.9073012
+1,1,Sign your name naturally.,draw_move,413,173,1772424283.922997
+1,1,Sign your name naturally.,draw_move,423,173,1772424283.939751
+1,1,Sign your name naturally.,draw_move,430,175,1772424283.9571688
+1,1,Sign your name naturally.,draw_move,435,180,1772424283.97377
+1,1,Sign your name naturally.,draw_move,438,187,1772424283.990179
+1,1,Sign your name naturally.,draw_move,439,196,1772424284.007367
+1,1,Sign your name naturally.,draw_move,438,204,1772424284.0235012
+1,1,Sign your name naturally.,draw_move,433,212,1772424284.040949
+1,1,Sign your name naturally.,draw_move,426,220,1772424284.05775
+1,1,Sign your name naturally.,draw_move,419,226,1772424284.0743759
+1,1,Sign your name naturally.,draw_move,413,232,1772424284.091288
+1,1,Sign your name naturally.,draw_move,409,235,1772424284.107709
+1,1,Sign your name naturally.,draw_move,406,237,1772424284.124058
+1,1,Sign your name naturally.,draw_move,405,237,1772424284.1407628
+1,1,Sign your name naturally.,draw_move,405,238,1772424284.188874
+1,1,Sign your name naturally.,draw_move,406,237,1772424284.305581
+1,1,Sign your name naturally.,draw_move,410,235,1772424284.322426
+1,1,Sign your name naturally.,draw_move,417,234,1772424284.338975
+1,1,Sign your name naturally.,draw_move,422,233,1772424284.359191
+1,1,Sign your name naturally.,draw_move,427,234,1772424284.371979
+1,1,Sign your name naturally.,draw_move,429,238,1772424284.388702
+1,1,Sign your name naturally.,draw_move,430,246,1772424284.405161
+1,1,Sign your name naturally.,draw_move,427,257,1772424284.421978
+1,1,Sign your name naturally.,draw_move,422,267,1772424284.438505
+1,1,Sign your name naturally.,draw_move,419,273,1772424284.4554791
+1,1,Sign your name naturally.,draw_move,417,277,1772424284.471741
+1,1,Sign your name naturally.,draw_move,416,278,1772424284.4888132
+1,1,Sign your name naturally.,draw_move,417,278,1772424284.505216
+1,1,Sign your name naturally.,draw_move,422,275,1772424284.5218282
+1,1,Sign your name naturally.,draw_move,434,265,1772424284.538746
+1,1,Sign your name naturally.,draw_move,450,251,1772424284.555434
+1,1,Sign your name naturally.,draw_move,462,238,1772424284.572211
+1,1,Sign your name naturally.,draw_move,471,228,1772424284.5886452
+1,1,Sign your name naturally.,draw_move,476,222,1772424284.605227
+1,1,Sign your name naturally.,draw_move,477,218,1772424284.621996
+1,1,Sign your name naturally.,draw_move,473,215,1772424284.638447
+1,1,Sign your name naturally.,draw_move,455,215,1772424284.655273
+1,1,Sign your name naturally.,draw_move,412,215,1772424284.672065
+1,1,Sign your name naturally.,draw_move,360,215,1772424284.688781
+1,1,Sign your name naturally.,draw_move,320,215,1772424284.705484
+1,1,Sign your name naturally.,draw_move,290,217,1772424284.722063
+1,1,Sign your name naturally.,draw_move,269,221,1772424284.738718
+1,1,Sign your name naturally.,draw_move,260,224,1772424284.7555041
+1,1,Sign your name naturally.,draw_end,260,224,1772424284.806137
+1,1,Type: The quick brown fox jumps over the lazy dog,key_press,Shift_L,,1772424287.422782
+1,1,Type: The quick brown fox jumps over the lazy dog,key_press,T,,1772424287.577832
+1,1,Type: The quick brown fox jumps over the lazy dog,key_release,Shift_L,,1772424287.609579
+1,1,Type: The quick brown fox jumps over the lazy dog,key_release,t,,1772424287.612684
+1,1,Type: The quick brown fox jumps over the lazy dog,key_press,h,,1772424287.745997
+1,1,Type: The quick brown fox jumps over the lazy dog,key_press,e,,1772424287.80159
+1,1,Type: The quick brown fox jumps over the lazy dog,key_release,h,,1772424287.8169441
+1,1,Type: The quick brown fox jumps over the lazy dog,key_release,e,,1772424287.929739
+1,1,Type: The quick brown fox jumps over the lazy dog,key_press,space,,1772424287.9441159
+1,1,Type: The quick brown fox jumps over the lazy dog,key_release,space,,1772424287.972105
+1,1,Type: The quick brown fox jumps over the lazy dog,key_press,q,,1772424288.0298188
+1,1,Type: The quick brown fox jumps over the lazy dog,key_release,q,,1772424288.097874
+1,1,Type: The quick brown fox jumps over the lazy dog,key_press,u,,1772424288.292935
+1,1,Type: The quick brown fox jumps over the lazy dog,key_press,i,,1772424288.348376
+1,1,Type: The quick brown fox jumps over the lazy dog,key_release,u,,1772424288.420039
+1,1,Type: The quick brown fox jumps over the lazy dog,key_release,i,,1772424288.4642718
+1,1,Type: The quick brown fox jumps over the lazy dog,key_press,c,,1772424288.5035892
+1,1,Type: The quick brown fox jumps over the lazy dog,key_press,k,,1772424288.5801458
+1,1,Type: The quick brown fox jumps over the lazy dog,key_release,c,,1772424288.598609
+1,1,Type: The quick brown fox jumps over the lazy dog,key_press,space,,1772424288.6676009
+1,1,Type: The quick brown fox jumps over the lazy dog,key_release,k,,1772424288.686858
+1,1,Type: The quick brown fox jumps over the lazy dog,key_release,space,,1772424288.759501
+1,1,Type: The quick brown fox jumps over the lazy dog,key_press,b,,1772424288.771459
+1,1,Type: The quick brown fox jumps over the lazy dog,key_release,b,,1772424288.867341
+1,1,Type: The quick brown fox jumps over the lazy dog,key_press,r,,1772424288.96174
+1,1,Type: The quick brown fox jumps over the lazy dog,key_press,o,,1772424289.045911
+1,1,Type: The quick brown fox jumps over the lazy dog,key_release,r,,1772424289.07315
+1,1,Type: The quick brown fox jumps over the lazy dog,key_release,o,,1772424289.1416478
+1,1,Type: The quick brown fox jumps over the lazy dog,key_press,w,,1772424289.144205
+1,1,Type: The quick brown fox jumps over the lazy dog,key_press,n,,1772424289.201946
+1,1,Type: The quick brown fox jumps over the lazy dog,key_release,w,,1772424289.224662
+1,1,Type: The quick brown fox jumps over the lazy dog,key_press,space,,1772424289.294025
+1,1,Type: The quick brown fox jumps over the lazy dog,key_release,n,,1772424289.308636
+1,1,Type: The quick brown fox jumps over the lazy dog,key_release,space,,1772424289.381462
+1,1,Type: The quick brown fox jumps over the lazy dog,key_press,f,,1772424289.428103
+1,1,Type: The quick brown fox jumps over the lazy dog,key_press,o,,1772424289.504719
+1,1,Type: The quick brown fox jumps over the lazy dog,key_release,f,,1772424289.519157
+1,1,Type: The quick brown fox jumps over the lazy dog,key_release,o,,1772424289.595872
+1,1,Type: The quick brown fox jumps over the lazy dog,key_press,x,,1772424289.6302972
+1,1,Type: The quick brown fox jumps over the lazy dog,key_press,space,,1772424289.758751
+1,1,Type: The quick brown fox jumps over the lazy dog,key_release,x,,1772424289.759501
+1,1,Type: The quick brown fox jumps over the lazy dog,key_press,j,,1772424289.839838
+1,1,Type: The quick brown fox jumps over the lazy dog,key_release,space,,1772424289.8413901
+1,1,Type: The quick brown fox jumps over the lazy dog,key_release,j,,1772424289.9416718
+1,1,Type: The quick brown fox jumps over the lazy dog,key_press,u,,1772424290.005316
+1,1,Type: The quick brown fox jumps over the lazy dog,key_release,u,,1772424290.088574
+1,1,Type: The quick brown fox jumps over the lazy dog,key_press,m,,1772424290.207653
+1,1,Type: The quick brown fox jumps over the lazy dog,key_press,p,,1772424290.315665
+1,1,Type: The quick brown fox jumps over the lazy dog,key_release,m,,1772424290.358735
+1,1,Type: The quick brown fox jumps over the lazy dog,key_release,p,,1772424290.43121
+1,1,Type: The quick brown fox jumps over the lazy dog,key_press,s,,1772424290.438467
+1,1,Type: The quick brown fox jumps over the lazy dog,key_release,s,,1772424290.56778
+1,1,Type: The quick brown fox jumps over the lazy dog,key_press,space,,1772424290.710786
+1,1,Type: The quick brown fox jumps over the lazy dog,key_release,space,,1772424290.792628
+1,1,Type: The quick brown fox jumps over the lazy dog,key_press,o,,1772424290.872076
+1,1,Type: The quick brown fox jumps over the lazy dog,key_press,v,,1772424290.949684
+1,1,Type: The quick brown fox jumps over the lazy dog,key_release,o,,1772424290.956353
+1,1,Type: The quick brown fox jumps over the lazy dog,key_release,v,,1772424291.033525
+1,1,Type: The quick brown fox jumps over the lazy dog,key_press,e,,1772424291.0784042
+1,1,Type: The quick brown fox jumps over the lazy dog,key_press,r,,1772424291.146932
+1,1,Type: The quick brown fox jumps over the lazy dog,key_release,e,,1772424291.193015
+1,1,Type: The quick brown fox jumps over the lazy dog,key_press,space,,1772424291.194728
+1,1,Type: The quick brown fox jumps over the lazy dog,key_release,r,,1772424291.2122712
+1,1,Type: The quick brown fox jumps over the lazy dog,key_release,space,,1772424291.2868302
+1,1,Type: The quick brown fox jumps over the lazy dog,key_press,h,,1772424291.406736
+1,1,Type: The quick brown fox jumps over the lazy dog,key_release,h,,1772424291.445739
+1,1,Type: The quick brown fox jumps over the lazy dog,key_press,BackSpace,,1772424291.73263
+1,1,Type: The quick brown fox jumps over the lazy dog,key_release,BackSpace,,1772424291.800309
+1,1,Type: The quick brown fox jumps over the lazy dog,key_press,t,,1772424291.827161
+1,1,Type: The quick brown fox jumps over the lazy dog,key_release,t,,1772424291.9108648
+1,1,Type: The quick brown fox jumps over the lazy dog,key_press,h,,1772424291.9290729
+1,1,Type: The quick brown fox jumps over the lazy dog,key_press,e,,1772424291.982215
+1,1,Type: The quick brown fox jumps over the lazy dog,key_release,h,,1772424292.022399
+1,1,Type: The quick brown fox jumps over the lazy dog,key_press,space,,1772424292.0261838
+1,1,Type: The quick brown fox jumps over the lazy dog,key_release,e,,1772424292.0532322
+1,1,Type: The quick brown fox jumps over the lazy dog,key_release,space,,1772424292.125366
+1,1,Type: The quick brown fox jumps over the lazy dog,key_press,l,,1772424292.343481
+1,1,Type: The quick brown fox jumps over the lazy dog,key_release,l,,1772424292.435603
+1,1,Type: The quick brown fox jumps over the lazy dog,key_press,a,,1772424292.457373
+1,1,Type: The quick brown fox jumps over the lazy dog,key_press,z,,1772424292.57146
+1,1,Type: The quick brown fox jumps over the lazy dog,key_release,a,,1772424292.5941749
+1,1,Type: The quick brown fox jumps over the lazy dog,key_press,y,,1772424292.694577
+1,1,Type: The quick brown fox jumps over the lazy dog,key_release,z,,1772424292.713496
+1,1,Type: The quick brown fox jumps over the lazy dog,key_press,space,,1772424292.758639
+1,1,Type: The quick brown fox jumps over the lazy dog,key_release,y,,1772424292.7975411
+1,1,Type: The quick brown fox jumps over the lazy dog,key_press,d,,1772424292.861521
+1,1,Type: The quick brown fox jumps over the lazy dog,key_release,space,,1772424292.863177
+1,1,Type: The quick brown fox jumps over the lazy dog,key_press,o,,1772424292.93403
+1,1,Type: The quick brown fox jumps over the lazy dog,key_release,d,,1772424292.95742
+1,1,Type: The quick brown fox jumps over the lazy dog,key_release,o,,1772424293.013885
+1,1,Type: The quick brown fox jumps over the lazy dog,key_press,g,,1772424293.028596
+1,1,Type: The quick brown fox jumps over the lazy dog,key_release,g,,1772424293.125603

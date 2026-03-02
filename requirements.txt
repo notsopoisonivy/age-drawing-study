@@ -3,3 +3,5 @@ streamlit-drawable-canvas
 pandas
 numpy
 altair==4.2.2
+streamlit-drawable-canvas
+st-gsheets-connection
